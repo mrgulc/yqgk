@@ -1,0 +1,21 @@
+<view class="location">
+  <van-search 
+    value="{{title}}"
+    label="地址"
+    placeholder="请输入地址搜索"
+    use-action-slot
+    bind:search="bindAddrSearch"
+   />
+  <view class="location__scroll">
+    <scroll-view enable-back-to-top bindscrolltolower="handlescrolltolower" scroll-y="true" class="location__scroll__view">
+      <view bind:tap="handlePoiTap" data-location="{{item.location}}" data-title="{{item.title}}" data-address="{{item.address}}" wx:for="{{sugAddrs}}" wx:key="index" class="location__poi">
+        <view class="location__poi-title">
+          {{item.title}}
+        </view>
+        <view class="location__poi-address">
+          {{item.address}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

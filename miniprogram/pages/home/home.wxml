@@ -1,0 +1,18 @@
+<mc-popup show="{{!hasUserInfo}}" bind:getUserInfo="getUserInfo"></mc-popup>
+<view class="saoma" >
+  <image bind:tap="handleScan" class="saoma__img" src="../../assets/home/saoma.png"/>
+</view>
+<van-field 
+  bind:tap="addrFieldTab"
+  value="{{locationInfo.title}}"
+  readonly
+  label="所在区域" 
+  icon="arrow"
+  placeholder="请选择地址"></van-field>
+<van-field 
+  bind:input="handleDetailIpt"
+  value="{{locationInfo.address}}"
+  label="详细地址" 
+  placeholder="请输入详细地址"
+  type="textarea"
+  autosize></van-field>

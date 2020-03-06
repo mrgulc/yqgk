@@ -1,0 +1,14 @@
+<view wx:if="{{show}}" class="mc-mask" ></view>
+<view class="mc-popup {{!show ? '' : 'mc-popup-toggle'}}">
+  <view class="header">
+      标题
+  </view>
+  <view class="content">
+    <view class="content__title">
+      使用此功能必须获取你的用户信息
+    </view>
+    <view class="content__btn">
+      <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击授权</button>
+    </view>
+  </view>
+</view>

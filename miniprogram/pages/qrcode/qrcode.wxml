@@ -1,0 +1,19 @@
+<van-notify id="van-notify" />
+<view class="qrcode">
+  <view class="qrcode__pic">
+      <image src="{{imgSrc}}" style="width: 100%; height:300rpx;"></image>
+      <view class="qrcode__pic-text">
+        {{qrCodeType}}
+      </view>
+  </view>
+  
+  <view class="qrcode__info">
+    <van-field label="姓名" value="{{qrCodeData.name}}" readonly/>
+    <van-field label="身份证号" value="{{qrCodeData.idCard}}" readonly/>
+    <van-field label="健康码类型" value="{{qrCodeText}}" readonly/>
+  </view>
+  <van-field bind:input="tempinput" type="digit" label="体温" placeholder="输入体温" >
+    <van-icon slot="right-icon" name="/assets/qrcode/temp.png"/>
+  </van-field>
+  <van-button bind:click="handleTap"  custom-style="margin-top: 40rpx;" type="primary" size="large">提交</van-button>
+</view>

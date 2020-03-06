@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "mc-ipt": "../../components/mc-ipt/mc-ipt"
+  }
+}

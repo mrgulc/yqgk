@@ -1,0 +1,9 @@
+<view class="mc-n-bar">
+  <view class="mc-n-bar__title">
+    <slot name="title"/>
+  </view>
+  <view class="mc-n-bar__text {{isNav ? 'mc-n-bar__nav' : ''}}">
+      {{text === ''?'点击设置地理位置' : text }}
+    <slot name="text"/>
+  </view>
+</view>

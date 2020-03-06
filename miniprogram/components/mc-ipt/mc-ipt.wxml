@@ -1,0 +1,5 @@
+  <view class="mc__ipt">
+      <view class="mc__ipt__header">温度</view>
+      <input type="digit" class="mc__ipt__content" placeholder="输入体温" bindblur="handleData"  bindconfirm="handleData"></input>
+      <view class="mc__ipt__footer">℃</view>
+  </view>
